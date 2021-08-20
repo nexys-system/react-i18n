@@ -31,6 +31,9 @@ class I18n {
 
     const polyglot = new Polyglot(phrases);
     this.translator = polyglot.translate;
+    console.log('set');
+
+    return;
   }
 
   setLanguage(language: string): void {
@@ -44,6 +47,7 @@ class I18n {
    */
   translate(key: string, replaceVars?: { [key: string]: ReplaceVar }): string {
     if (!this.translator) {
+      console.error('react-i18n: translator not set');
       return key;
     }
 

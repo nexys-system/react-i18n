@@ -24,6 +24,8 @@ class Polyglot extends PolyglotAbstract {
       return s;
     }
 
+    console.log(p);
+
     return p;
   };
 }
