@@ -15,6 +15,7 @@ const UI = () => (
       </a>
     </p>
     <button className="btn btn-primary">{i18n.t('home.button')}</button>
+    <p>{i18n.t('home.intro', { name: 'John' })}</p>
     <p>
       <small>
         The following string <code>{i18n.t('tobetranslated')}</code> is not
