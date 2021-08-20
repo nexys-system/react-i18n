@@ -4,16 +4,25 @@ import { languageDefault, urlDefault } from './conf';
 import { Phrases, ReplaceVar } from './type';
 import * as U from './utils';
 
-
+interface Options {
+  variableInterpolationPrefix?: string;
+  variableInterpolationSuffix?: string;
+}
 
 class I18n {
   lang: string;
   translator?: (s: string) => string;
   urlFetch: string;
+  options: Options;
 
-  constructor(lang: string = languageDefault, urlFetch?: string, { variableInterpolationPrefix }:{ variableInterpolationPrefix?: string }) {
+  constructor(
+    lang: string = languageDefault,
+    urlFetch?: string,
+    options?: Options
+  ) {
     this.lang = lang;
     this.urlFetch = urlFetch || this.getUrlFetch();
+    this.options = options || {};
   }
 
   async getPhrases(forceRefresh: boolean = false): Promise<Phrases> {
@@ -55,7 +64,12 @@ class I18n {
 
     const content: string = this.translator(key);
 
-    return U.substituteVars(content, replaceVars, variableInterpolationPrefix);
+    return U.substituteVars(
+      content,
+      replaceVars,
+      this.options.variableInterpolationPrefix,
+      this.options.variableInterpolationSuffix
+    );
   }
 
   // alias, so `i18n.t` can be used instead of `i18n.translate`
