@@ -53,7 +53,7 @@ class I18n {
 
     const content: string = this.translator(key);
 
-    return U.substituteVars(content, replaceVars, '%{');
+    return U.substituteVars(content, replaceVars);
   }
 
   // alias, so `i18n.t` can be used instead of `i18n.translate`
