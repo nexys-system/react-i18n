@@ -1,11 +1,11 @@
 # I18n for React
 
-[![npm version](https://badge.fury.io/js/%40nexys%2Freact-i18n.svg)](https://www.npmjs.com/package/@nexys/react-i18n)
-[![npm version](https://img.shields.io/npm/v/@nexys/react-i18n.svg)](https://www.npmjs.com/package/@nexys/react-i18n)
-![Test Package](https://github.com/Nexysweb/react-i18n/workflows/Test%20Package/badge.svg)
-![Publish](https://github.com/Nexysweb/react-i18n/workflows/Publish/badge.svg)
-![Code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)
-[![Bundlephobia](https://badgen.net/bundlephobia/min/@nexys/react-i18n)](https://bundlephobia.com/result?p=@nexys/react-i18n)
+[![NPM package](https://badge.fury.io/js/%40nexys%2Freact-i18n.svg)](https://www.npmjs.com/package/@nexys/react-i18n)
+[![NPM package](https://img.shields.io/npm/v/@nexys/react-i18n.svg)](https://www.npmjs.com/package/@nexys/react-i18n)
+[![Bundleophobia](https://badgen.net/bundlephobia/min/@nexys/react-i18n)](https://bundlephobia.com/result?p=@nexys/react-i18n)
+[![Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io/)
+[![Test Package](https://github.com/nexys-system/react-i18n/actions/workflows/yarn.yml/badge.svg)](https://github.com/nexys-system/react-i18n/actions/workflows/yarn.yml)
+[![Publish](https://github.com/nexys-system/react-i18n/actions/workflows/publish.yml/badge.svg)](https://github.com/nexys-system/react-i18n/actions/workflows/publish.yml)
 
 I18n implementation.
 
