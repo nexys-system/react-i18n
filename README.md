@@ -39,7 +39,9 @@ import I18nService from '@nexys/react-i18n';
 
 const i18n = new I18n(); // this needs to be done once
 
-export default () => (<Wrapper i18n={i18n}>
-  <p>{i18n.translate('myStringToBeTranslated')}
-</Wrapper>);
+const UI = () => <p>{i18n.translate('myStringToBeTranslated')}</p>;
+
+export default Wrapper(i18n, UI);
 ```
+
+see https://github.com/nexys-system/react-i18n/blob/master/src/app.tsx for more information.
