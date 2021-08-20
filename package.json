@@ -3,7 +3,9 @@
   "version": "0.0.2",
   "license": "MIT",
   "scripts": {
-    "build": "tsc",
+    "start": "SNOWPACK_PUBLIC_URL= snowpack dev",
+    "build": "snowpack build",
+    "buildpackage": "tsc",
     "test": "rm -rf dist;jest"
   },
   "main": "dist/index.js",
@@ -37,6 +39,7 @@
     "prettier": "^2.0.5",
     "react": "^17.0.2",
     "react-router-dom": "^5.2.0",
+    "snowpack": "^3.8.6",
     "ts-jest": "^25.4.0",
     "typescript": "~3.9.3"
   }
