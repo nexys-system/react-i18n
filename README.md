@@ -14,3 +14,32 @@ I18n implementation.
 - get strings from a backend
 - strings are cached in the local store
 - untranslated strings are added to the local store
+
+## Get Started
+
+### Installation
+
+`yarn add @nexys/react-i18n`
+
+### Intialization
+
+```
+import I18nService from '@nexys/react-i18n';
+
+const i18n = new I18n(); // this needs to be done once
+i18n.init(); // gets the strings
+
+i18n.translate('myStringToBeTranslated')
+```
+
+#### With wrapper
+
+```
+import I18nService from '@nexys/react-i18n';
+
+const i18n = new I18n(); // this needs to be done once
+
+export default () => (<Wrapper i18n={i18n}>
+  <p>{i18n.translate('myStringToBeTranslated')}
+</Wrapper>);
+```

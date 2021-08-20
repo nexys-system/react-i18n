@@ -29,7 +29,7 @@ class I18n {
   async init(forceRefresh: boolean = false): Promise<void> {
     const phrases = await this.getPhrases(forceRefresh);
 
-    const polyglot: Polyglot = new Polyglot(phrases);
+    const polyglot = new Polyglot(phrases);
     this.translator = polyglot.translate;
   }
 
@@ -51,6 +51,9 @@ class I18n {
 
     return U.substituteVars(content, replaceVars, '%{');
   }
+
+  // alias, so `i18n.t` can be used instead of `i18n.translate`
+  t = this.translate;
 
   getUrlFetch(): string {
     const url: string = process.env.I18N_URL_FETCH || urlDefault;
