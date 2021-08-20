@@ -1,6 +1,6 @@
 {
   "name": "@nexys/react-i18n",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "scripts": {
     "build": "tsc",
@@ -20,7 +20,6 @@
     "i18n",
     "react"
   ],
-  "dependencies": {},
   "peerDependencies": {
     "@types/react": "^16.9.44",
     "@types/react-router-dom": "^5.1.5",
