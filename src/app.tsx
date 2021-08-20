@@ -3,8 +3,10 @@ import React from 'react';
 import I18n from './lib/main';
 import I18nWrapper from './lib/Wrapper';
 
+export const basename: string = import.meta.env.SNOWPACK_PUBLIC_URL || '';
+
 const language = localStorage.getItem('LANG') || 'en';
-const langUrl = '/assets/' + language + '.json';
+const langUrl = basename + '/assets/' + language + '.json';
 
 const i18n = new I18n(language, langUrl);
 
