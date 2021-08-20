@@ -1,4 +1,4 @@
-import Polyglot from './polyglot';
+import Polyglot from './index';
 
 describe('Polyglot', () => {
   const p = new Polyglot({ hello: 'world' });
