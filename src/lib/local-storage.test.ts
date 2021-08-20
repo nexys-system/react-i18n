@@ -8,7 +8,11 @@ test('i18n local storage', () => {
   const lang = 'de';
   const phrases: Phrases = { k1: 'v1', k2: 'v2', k3: 'v3' };
   to(lang, phrases);
-  const content = get(lang);
+  const pContent = get(lang);
 
-  expect(content).toEqual(phrases);
+  if (!pContent) {
+    throw Error('somethig went wrong');
+  }
+
+  expect(pContent.content).toEqual(phrases);
 });

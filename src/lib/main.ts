@@ -4,9 +4,12 @@ import { languageDefault, urlDefault } from './conf';
 import { Phrases, ReplaceVar } from './type';
 import * as U from './utils';
 
+const maxDeltaRefreshDefault = 1000 * 60 * 60 * 24;
+
 interface Options {
   variableInterpolationPrefix?: string;
   variableInterpolationSuffix?: string;
+  maxDeltaRefresh?: number;
 }
 
 class I18n {
@@ -25,16 +28,29 @@ class I18n {
     this.options = options || {};
   }
 
+  async refresh(): Promise<Phrases> {
+    const phrases = await U.getTranslationsFromServer(this.urlFetch);
+    LocalStorage.to(this.lang, phrases);
+    return phrases;
+  }
+
   async getPhrases(forceRefresh: boolean = false): Promise<Phrases> {
     const localStorageContent = LocalStorage.get(this.lang);
 
     if (forceRefresh || localStorageContent === null) {
-      const phrases = await U.getTranslationsFromServer(this.urlFetch);
-      LocalStorage.to(this.lang, phrases);
-      return phrases;
+      return this.refresh();
     }
 
-    return localStorageContent;
+    const { content, timestamp } = localStorageContent;
+
+    const maxDeltaRefresh: number =
+      this.options.maxDeltaRefresh || maxDeltaRefreshDefault;
+
+    if (new Date().getTime() - timestamp > maxDeltaRefresh) {
+      return this.refresh();
+    }
+
+    return content;
   }
 
   async init(forceRefresh: boolean = false): Promise<void> {
@@ -42,7 +58,6 @@ class I18n {
 
     const polyglot = new Polyglot(phrases);
     this.translator = polyglot.translate;
-    console.log('set');
 
     return;
   }
