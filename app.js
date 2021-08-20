@@ -1,8 +1,11 @@
+import * as __SNOWPACK_ENV__ from './_snowpack/env.js';
+
 import React from "./_snowpack/pkg/react.js";
 import I18n from "./lib/main.js";
 import I18nWrapper from "./lib/Wrapper.js";
+export const basename = __SNOWPACK_ENV__.SNOWPACK_PUBLIC_URL || "";
 const language = localStorage.getItem("LANG") || "en";
-const langUrl = "/assets/" + language + ".json";
+const langUrl = basename + "/assets/" + language + ".json";
 const i18n = new I18n(language, langUrl);
 const UI = () => {
   const handleClick = () => {
