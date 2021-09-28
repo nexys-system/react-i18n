@@ -1,4 +1,8 @@
-export const languageDefault: string = 'en';
+// this key has to match
+// https://github.com/nexys-system/react-stateful/blob/master/src/lib/conf.ts#L4
+const LOCALE_LANG = 'locale_lang;
+
+export const languageDefault: string = LocalStorage.getItem(LOCALE_LANG) || 'en';
 
 export const countryDefault = 'US';
 
