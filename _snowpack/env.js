@@ -1,4 +1,4 @@
-export const SNOWPACK_PUBLIC_GIT_SHA = "60b13a7a10ce0e4a51adb5f8eb42540fe2119411";
+export const SNOWPACK_PUBLIC_GIT_SHA = "8d4a73579368431b9443741b7db422ca7aca1f99";
 export const SNOWPACK_PUBLIC_URL = "/react-i18n";
 export const MODE = "production";
 export const NODE_ENV = "production";
