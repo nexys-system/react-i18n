@@ -1,6 +1,6 @@
 {
   "name": "@nexys/react-i18n",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "license": "MIT",
   "scripts": {
     "start": "SNOWPACK_PUBLIC_URL= snowpack dev",
