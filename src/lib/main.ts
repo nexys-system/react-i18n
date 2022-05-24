@@ -91,7 +91,7 @@ class I18n {
   t = this.translate;
 
   getUrlFetch(): string {
-    const url: string = process.env.I18N_URL_FETCH || urlDefault;
+    const url: string = urlDefault;
 
     return url.replace('{lang}', this.lang);
   }

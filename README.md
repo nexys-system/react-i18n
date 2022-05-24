@@ -4,7 +4,7 @@
 [![NPM package](https://img.shields.io/npm/v/@nexys/react-i18n.svg)](https://www.npmjs.com/package/@nexys/react-i18n)
 [![Bundleophobia](https://badgen.net/bundlephobia/min/@nexys/react-i18n)](https://bundlephobia.com/result?p=@nexys/react-i18n)
 [![Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io/)
-[![Test Package](https://github.com/nexys-system/react-i18n/actions/workflows/yarn.yml/badge.svg)](https://github.com/nexys-system/react-i18n/actions/workflows/yarn.yml)
+[![Test Package](https://github.com/nexys-system/react-i18n/actions/workflows/test.yml/badge.svg)](https://github.com/nexys-system/react-i18n/actions/workflows/test.yml)
 [![Publish](https://github.com/nexys-system/react-i18n/actions/workflows/publish.yml/badge.svg)](https://github.com/nexys-system/react-i18n/actions/workflows/publish.yml)
 
 I18n implementation.
