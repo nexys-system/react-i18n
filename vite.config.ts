@@ -14,11 +14,7 @@ const baseConfig = {
 export default defineConfig(({ mode }) => {
   // if  `mode===ghpages`: we add the path prefix to match the path prefix of gh pages
   if (mode === 'ghpages') {
-    return { ...baseConfig, base: '/boilerplate_vite/' };
-  }
-
-  if (mode === 'deploy') {
-    return { ...baseConfig };
+    return { ...baseConfig, base: '/react-i18n/' };
   }
 
   return baseConfig;

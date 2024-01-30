@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "start": "vite",
-    "build": "snowpack build",
+    "build": "vite build --mode ghpages",
     "buildpackage": "tsc",
     "test": "vitest"
   },
