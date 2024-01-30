@@ -1,4 +1,9 @@
+import { test, expect } from 'vitest';
 import { getBrowserLanguage, getLanguage } from './utils';
+
+import NavigatorMock from './navigator-mock.ts';
+
+global.window = { navigator: new NavigatorMock() as any } as any;
 
 test('getBrowserLanguage', () => {
   const value = 'en';

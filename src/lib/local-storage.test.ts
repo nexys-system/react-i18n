@@ -1,3 +1,4 @@
+import { test, expect } from 'vitest';
 import LocalStorageMock from './local-storage-mock';
 import { to, get } from './local-storage';
 import { Phrases } from './type';

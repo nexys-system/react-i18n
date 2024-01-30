@@ -1,10 +1,11 @@
+import { test, expect } from 'vitest';
+
 import LocalStorageMock from './local-storage-mock';
 import { to } from './local-storage';
 import I18n from './main';
 import { Phrases } from './type';
 
 global.localStorage = new LocalStorageMock();
-global.fetch = require('node-fetch');
 
 const i18n = new I18n('en', undefined, { variableInterpolationPrefix: '%{' });
 

@@ -1,4 +1,4 @@
-global.fetch = require('node-fetch');
+import { test, expect } from 'vitest';
 import * as Stateful from './index';
 
 test('make sure all dependencies do not return null', () => {

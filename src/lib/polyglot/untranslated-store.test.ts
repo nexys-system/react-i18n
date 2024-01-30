@@ -1,4 +1,8 @@
+import { describe, test, expect } from 'vitest';
 import * as U from './untranslated-store';
+import LocalStorageMock from '../local-storage-mock.ts';
+
+global.localStorage = new LocalStorageMock();
 
 describe('get and set', () => {
   test('get and set simple', () => {
