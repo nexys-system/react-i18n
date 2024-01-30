@@ -2,10 +2,10 @@
 
 [![NPM package](https://badge.fury.io/js/%40nexys%2Freact-i18n.svg)](https://www.npmjs.com/package/@nexys/react-i18n)
 [![NPM package](https://img.shields.io/npm/v/@nexys/react-i18n.svg)](https://www.npmjs.com/package/@nexys/react-i18n)
-
 [![Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io/)
 [![Test Package](https://github.com/nexys-system/react-i18n/actions/workflows/test.yml/badge.svg)](https://github.com/nexys-system/react-i18n/actions/workflows/test.yml)
 [![Publish](https://github.com/nexys-system/react-i18n/actions/workflows/publish.yml/badge.svg)](https://github.com/nexys-system/react-i18n/actions/workflows/publish.yml)
+[![Deploy](https://github.com/nexys-system/react-i18n/actions/workflows/deploy.yml/badge.svg)](https://github.com/nexys-system/react-i18n/actions/workflows/deploy.yml)
 
 I18n implementation.
 
